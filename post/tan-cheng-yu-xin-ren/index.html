@@ -2,21 +2,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <meta name="description" content="
+此篇上接 此篇文章
+
+
+任 何人在一段关系 中 都应 坦诚 信任。这是一段关系的原则问题。‌
+
+
+而任何择 友与处世 态度决定了一切值不得值得你继续完成下去的理由。‌
+
+
+我们总是把最好的一面崭示啊给别人，把痛苦的一面留给自己。‌
+
+
+我..." />
+    <meta name="keywords" content="坦诚,信任,处事,做人,情感" />
     <link rel="stylesheet" href="https://www.sora.ltd/media/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
     <link rel="stylesheet" href="https://www.sora.ltd/styles/main.css">
-    <meta name="description" content="一名双性恋的情感学习成长🌈" />
-    <link rel="stylesheet" href="https://www.sora.ltd/media/css/font-awesome.css">
-    <title>Sora</title>
+    <!-- 代码渲染风格css -->
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/vs2015.min.css">
+    
+    <!-- 代码高亮插件 -->
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+    <!-- 代码复制插件 -->
+    <script src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/clipboard.min.js"></script>
+    <!-- live2d插件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+    <!-- 数学公式 -->
+    
+    <title>坦诚与信任</title>
+
+    <!-- 大纲索引css调整 -->
+    
+    <style>
+        .markdownIt-TOC {
+            margin-left: 28%;
+            padding-left: 2px;
+            width: 80%;
+        }
+
+        .markdownIt-TOC li {
+            padding-left: 8%;
+        }
+    </style>
+    
 </head>
+
 <body>
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
+    <div id="domainname" style="display:none">https://www.sora.ltd</div>
     <div id="content">
-        <div class="nav-large">
-            <div class="row">
-                <!--------------- pc端菜单栏👇 ---------------->
-                <div class="side"><head>
+        <div>
+            <!----------- 移动端导航栏👇 ----------------->
+            <div id="bar">
+                <head>
+  <!-- 引入Bootstrap核心样式文件 -->
+  <link rel="stylesheet" href="https://www.sora.ltd/media/css/bootstrap.min.css">
+</head>
+<style>
+  .navmobile {
+    z-index: 15;
+    max-height: 40vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .navbar {
+      max-width: 100vw;
+    }
+  }
+
+  @media screen and (max-width:1200px) and (min-width: 768px) {
+    @media (min-width: 768px) {
+      .navbar-nav {
+        float: right;
+        margin: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .mbapspan {
+      padding: 0;
+    }
+  }
+</style>
+<div class="pjaxloading"  onclick="pjaxloadingClose()">
+  <div class="loadingbackground"></div>
+  <div id="loading">
+    <div class="loading">
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-inverse navbar-fixed-top navmobile">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barmenu"
+        aria-expanded="false" id="barbutton">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a data-pjax class="navbar-brand" href="https://www.sora.ltd">Sora&nbsp;&nbsp;|</a>
+      <span class="navbar-brand mbapspan"><i id="mbaplayer" class="fa fa-play-circle-o" aria-hidden="true"
+          style="font-size: 28px;top: 12px;position: absolute;" onclick="aplayerPlay();"></i></span>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="barmenu">
+      <ul class="nav navbar-nav">
+        
+        
+        <li>
+          <a data-pjax href="https://www.sora.ltd">
+            首页
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="https://www.sora.ltd/archives">
+            归档
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="https://www.sora.ltd/tags">
+            标签
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="https://www.sora.ltd/post/guan-yu">
+            关于
+          </a>
+        </li>
+        
+        
+        
+          
+        <li><a data-pjax href="https://www.sora.ltd/friends">友链</a></li>
+
+        
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+  <!-- 引入jQuery核心js文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  <script>
+    let btstate = false;
+    var bt = $("#barbutton");
+    var bm = $("#barmenu");
+    bt.click(function () {
+      dropdown();
+    })
+    function dropdown() {
+      console.log(btstate);
+      //下拉
+      if (btstate == false) {
+        bt.removeClass("collapsed");
+        bt.attr("aria-expanded", "true");
+        bm.attr("aria-expanded", "true")
+        bm.fadeIn(700);
+        btstate = true;
+      }
+      else {
+        bt.addClass("collapsed");
+        bt.attr("aria-expanded", "false");
+        bm.removeClass("in");
+        bm.hide();
+        bm.attr("aria-expanded", "false");
+        btstate = false;
+      }
+    }
+  </script> 
+            </div>
+            <!----------- 移动端导航栏👆 ----------------->
+
+            <!--------------- pc端菜单栏👇 ---------------->
+            <div class="side"><head>
     <link rel="stylesheet" href="https://www.sora.ltd/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://www.sora.ltd/styles/main.css">
     
@@ -766,144 +948,11 @@ menulist.eq(i).show();
 }
 </script>
 <!--------------------- 菜单栏图标加载功能👆 -----------------------></div>
-                <!--------------- pc端菜单栏👆 ---------------->
-                <!----------- 移动端导航栏👇 ----------------->
-                <div class="mobilebar"><head>
-  <!-- 引入Bootstrap核心样式文件 -->
-  <link rel="stylesheet" href="https://www.sora.ltd/media/css/bootstrap.min.css">
-</head>
-<style>
-  .navmobile {
-    z-index: 15;
-    max-height: 40vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
+            <!--------------- pc端菜单栏👆 ---------------->
 
-  @media screen and (max-width: 1200px) {
-    .navbar {
-      max-width: 100vw;
-    }
-  }
-
-  @media screen and (max-width:1200px) and (min-width: 768px) {
-    @media (min-width: 768px) {
-      .navbar-nav {
-        float: right;
-        margin: 0;
-      }
-    }
-  }
-
-  @media screen and (max-width:768px) {
-    .mbapspan {
-      padding: 0;
-    }
-  }
-</style>
-<div class="pjaxloading"  onclick="pjaxloadingClose()">
-  <div class="loadingbackground"></div>
-  <div id="loading">
-    <div class="loading">
-    </div>
-  </div>
-</div>
-<nav class="navbar navbar-inverse navbar-fixed-top navmobile">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barmenu"
-        aria-expanded="false" id="barbutton">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a data-pjax class="navbar-brand" href="https://www.sora.ltd">Sora&nbsp;&nbsp;|</a>
-      <span class="navbar-brand mbapspan"><i id="mbaplayer" class="fa fa-play-circle-o" aria-hidden="true"
-          style="font-size: 28px;top: 12px;position: absolute;" onclick="aplayerPlay();"></i></span>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="barmenu">
-      <ul class="nav navbar-nav">
-        
-        
-        <li>
-          <a data-pjax href="https://www.sora.ltd">
-            首页
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="https://www.sora.ltd/archives">
-            归档
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="https://www.sora.ltd/tags">
-            标签
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="https://www.sora.ltd/post/guan-yu">
-            关于
-          </a>
-        </li>
-        
-        
-        
-          
-        <li><a data-pjax href="https://www.sora.ltd/friends">友链</a></li>
-
-        
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-
-
-  <!-- 引入jQuery核心js文件 -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-  <script>
-    let btstate = false;
-    var bt = $("#barbutton");
-    var bm = $("#barmenu");
-    bt.click(function () {
-      dropdown();
-    })
-    function dropdown() {
-      console.log(btstate);
-      //下拉
-      if (btstate == false) {
-        bt.removeClass("collapsed");
-        bt.attr("aria-expanded", "true");
-        bm.attr("aria-expanded", "true")
-        bm.fadeIn(700);
-        btstate = true;
-      }
-      else {
-        bt.addClass("collapsed");
-        bt.attr("aria-expanded", "false");
-        bm.removeClass("in");
-        bm.hide();
-        bm.attr("aria-expanded", "false");
-        btstate = false;
-      }
-    }
-  </script> 
-                <!----------- 移动端导航栏👆 ----------------->
-                </div>
-                <!-- ----------------左侧菜单栏html 👇-------------------------------------->
-                
+            <!-- ----------------左侧菜单栏html 👇-------------------------------------->
+            
+            <div>
                 <div id="tab1" class="tab">
                     <div class="bars">
                         <span></span>
@@ -913,50 +962,226 @@ menulist.eq(i).show();
                     <div class="close"></div>
                 </div>
                 <div class="col-md-1 col-lg-3"></div>
-                <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
-                    <body>
-    <div id="friendscontainermobile">
-        
-        
-        
-    </div>
+                <!-- main标签，pjax渲染时加载以下内容👇 -->
+                <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-7" style="padding:0;">
+                    <link rel="stylesheet" href="https://www.sora.ltd/media/css/font-awesome.css">
 
-    <div id="pcintroimg">
-        <div class="sea">
-            <p class="title">友人帐</p>
-            <span class="wave"></span>
-            <span class="wave"></span>
-            <span class="wave"></span>
+<body>
+    <div class="allcontent" id="postdetail">
+        <div class="postshow postpadding" style="padding-bottom: 0;">
+            
+            <div class="postdetailimg">
+                <img src="https://jioushan.top/wp-content/uploads/2021/04/087f4d4957238aeabf71870059958747.jpeg" class="postimage" style="cursor:auto">
+            </div>
+            <div class="postinfo-detail">
+                <div class="postdate"><i class="fa fa-calendar"></i>2021-05-22</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 7 min read</div>
+                <div class="posttag">
+                    
+                    <a data-pjax href="https://www.sora.ltd/tag/wOYrmbQEW/" class="postlink">
+                        <i class="fa fa-tag"></i> 坦诚
+                    </a>
+                    
+                    <a data-pjax href="https://www.sora.ltd/tag/JzM4WeV-mo/" class="postlink">
+                        <i class="fa fa-tag"></i> 信任
+                    </a>
+                    
+                    <a data-pjax href="https://www.sora.ltd/tag/PP_qsveZSb/" class="postlink">
+                        <i class="fa fa-tag"></i> 处事
+                    </a>
+                    
+                    <a data-pjax href="https://www.sora.ltd/tag/J0sat9ItwD/" class="postlink">
+                        <i class="fa fa-tag"></i> 做人
+                    </a>
+                    
+                    <a data-pjax href="https://www.sora.ltd/tag/EruIhfduy/" class="postlink">
+                        <i class="fa fa-tag"></i> 情感
+                    </a>
+                    
+                </div>
+            </div>
+            
+        <div id="articlecontent">
+            <div id="texttitle" style="text-align: center">
+                <h2 id="ptitle">坦诚与信任</h2>
+                <!-- id 将作为查询条件 -->
+                <div id="pl" style="display:none">https://www.sora.ltd/post/tan-cheng-yu-xin-ren/</div>
+                <div id="rootaddr" style="display:none">https://www.sora.ltd</div>
+                
+            </div>
+            <div class="text ">
+                <!-- wp:paragraph -->
+<p>此篇上接 <a href="https://jioushan.top/2021/04/30/%e4%b8%80%e4%b8%aa%e6%9c%88%e7%9a%84%e6%84%9f%e6%83%85%e5%8f%b2/" target="_blank" rel="noreferrer noopener" aria-label="此篇文章（在新窗口打开）">此篇文章</a></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>任 何人在一段关系 中 都应 坦诚 信任。这是一段关系的原则问题。‌</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>而任何择 友与处世 态度决定了一切值不得值得你继续完成下去的理由。‌</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>我们总是把最好的一面崭示啊给别人，把痛苦的一面留给自己。‌</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>我就是觉得<strong>我不配</strong>一样。我本来是什么样的人难道我没说吗？‌</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>那种感觉我就是难受。你怕被控制。你不相信我。（或者说我还不配得到你的信任，甚至还不如一个比我多了半年交往的同学。你跟你姐妹玩的这么high。谁来考虑我呢？说我小心眼，我承认。我本来就自私。属于我自己的，凭什么要分享。除非值得我去分享或者投资。利益交换。不属于我的，我压根儿就不参与。我的处事规则态度就是，跟我有关的，我会用的我的权力处理好属于我的事情。不属于我的事情我根本就不管。‌</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>你过去经历什么，走不出来是你自己的问题。（准确说，这是你接触我之前就应该处理好的问题。这才是一个成年的成熟人应该做好的事情。我最讨厌别人的事情要我来做了。自己有没有能力做好是自己的事情，我凭什么帮你。‌</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>你不想我帮你，连参与都不能。（我遵循你的态度，毕竟过去我也是这样方式自己一点点走出来，面对这个世界，这一切的。你还努力使我们两个人能够一点点深入，我看到你的努力所以我会心疼。我心疼是因为我爱你。我真的不忍心对你生气，但是我真的讨厌情绪化，幼稚化的行为。‌</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>我不喜欢给别人添麻烦，自己的事情做好。一个环境中本来我就是存在感低的人。我只需要完成好我自己的，既不需要争第一，也尽量不脱车尾。这是我从小到大的处事原则。‌</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>本来性格就自卑，我战胜了很多才这如此。你比我还难，但是我真的不想你这样的时候遇见我。我真的好累。好累。因为我这三年碰到都是这样的人。一个两个三个 四个。有些人不相信吸引力。我是相信。在我的平行宇宙吸引到的都是这样的人。‌</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>每个人<strong>逃避现实</strong>的方式真的不一样。我遵循各种方式，各种思维出现的异想天开脑洞。‌</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>相不相信，信任与否是对方的事情，也是相互的事情，我的耐心与宽容力早就在这些年的磨练中一点点增长。‌</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>至少我尽力做好，对任何人都是一样的。‌</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>我曾经在我<strong>黑暗时期</strong>刚出来的时候，我玩的 很开。什么人打交道，但是没有真心的那种我就放弃了。见识过这个世间各种黑暗。很多事情随着认知就自然的升华了。然后慢慢想开，其实人生有什么值得的？本来就没有什么值得，做好当下。握住眼前的。至于过去，以后属于不属于我的，都是身外之物。没有什么值得留恋。‌</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>我记忆力真的大概，就没好过。不知何时起，我就习惯了昨天的事情，今天就忘记。有些事情细节可以记得很久，但是事情的大致过程我都忘记差不多了，甚至说模糊状态。但是教会我让我学会的事情我终将存在于潜意识。所以很多事情 过脑不过心。然后后来就是过心的事情也记不住。这是我生病后来的事情了。刻意想记都记不住。‌</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>前天，我朋友来找我：（一个很像我），其实如果不是前几天我们两个人讲开。坦诚交换心意。也许他终究没明白我曾当时的心意。不过既然说开，错过就错过了，毕竟他也碰到了他的新欢。但是他也是处于受伤的那个状态吧。‌</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>但是他聊起来一个点，可能是过去我们三人群体存在的一个问题，就是兴趣不投，值得深入下去吗？‌</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>很明显，对于我这种互补的爱情，他觉得我活的很累。不值得。因为太难了，有些事情想想都觉的累，也许只有像我这样的人经历过的人，或者在经历状态中的人才知道值不值得，我自己也不知道最终的结局如何。但是我总喜欢做那些明明我已经有了答案，我还要享受过程再做一次。打破我的认知告诉我，之前的判断是错误的事情。我一直期望发生这样的事情，在过去的人生中并不是没有出现过，所以某种状态中我还是坦然，佛系面对的。‌</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>谈起他，让我想起一个我自己很严重的问题：很多时候，我和别人交流总是话不投机，或者别人觉得我总在答非所问。但也许之前都是网友一部分 学者 可以和我这样沟通，我觉得很正常。但是身边人大部分朋友，普通人都无法接受。母亲也如此。他应该是第一个喜欢和我辩论交流。两个人并没有刻意争谁对谁错，就是喜欢发散思维交流。谈天说地，虽然在认知有一些差异化影响。但突然想起恋人，和他也是类似。两个人都很回避。如果我和他说普通同学，朋友关系。其实不会出现这么多磨合问题。但是恋人可能习惯回避逃避问题。不想深入聊下去。我那位朋友比较回避<strong>性</strong>，其他的都可以聊。‌</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>对我来说，信任是一个很严重的问题，我不会随意将自己心绪托付给他人，这个人要具有很多品质特点，要足够深的我的信任，我才会对他讲述各种事情。‌</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>不知为何，我们总是舔着脸，鼓起勇气去追寻去比我优秀很多的人的存在，却常常忽略身边值得注意的人，但也许身边的人并没有追逐的人那样精彩，但是相遇及时缘分，而缘分终至，也没什么值得贪恋的。‌</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>（不知为何，大概认识很多不如我的人，却交集很容易，有的人超越了我，有的人比我优秀很多，反观很优秀的人却没有留恋住，也许真的是自己配不上吧。很多当年鼓起勇气做的事情，都没有认真坚持下来。）‌</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>不知为何，别人请我分析事情的时候，我选择用共情能力去讲自己，可能我自己有些事情都没有做好，何谈帮助别人做出抉择呢？但即使没有什么帮助，我也希望他能够借鉴我的事情。规避一些风险。</p>
+<!-- /wp:paragraph -->
+<!-- wp:html -->
+<iframe allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/album/anywhere-is-single-edit/305695085?i=305695168"></iframe>
+<!-- /wp:html -->
+            </div>
+            <hr style="width: 80%;">
+            
+            <div class="donateContainer">
+                <span class="donatebtn">赏</span>
+            </div>
+            <div class="donateContainer">
+                <img src="https://cdn.jsdelivr.net/gh/jioushan/CDN@1.1/aripay.jpg" alt="" class="donate">
+            </div>
+            
+            <div class="postfooter">
+                <ul class="post-copyright">
+                    <li><strong>文章作者：</strong>jioushan</li>
+            <li><strong>原文链接：</strong>https://www.sora.ltd/post/tan-cheng-yu-xin-ren/</li>
+            <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA
+                许可协议。转载请注明出处！</li>
+            </ul>
+        </div>
+        
+            <div class="shareContainer">
+                <div class="share" style="height:30px;background: white;">
+                    <a class="qq" href=""><i><img class="shareicon"
+                                src="https://www.sora.ltd/media/images/qqs.png" alt=""></i></a>
+                    <a class="wechat" href=""><i><img class="shareicon"
+                                src="https://www.sora.ltd/media/images/wechats.png" alt=""></i></a>
+                    <a class="weibo" href=""><i><img class="shareicon"
+                                src="https://www.sora.ltd/media/images/weibos.png" alt=""></i></a>
+                    <a class="qzone" href=""><i><img class="shareicon"
+                                src="https://www.sora.ltd/media/images/qzones.png" alt=""></i></a>
+                    <a class="douban" href=""><i><img class="shareicon"
+                                src="https://www.sora.ltd/media/images/doubans.png" alt=""></i></a>
+                    <a class="facebook" href=""><i><img class="shareicon"
+                                src="https://www.sora.ltd/media/images/facebooks.png" alt=""></i></a>
+                    <a class="twitter" href=""><i><img class="shareicon"
+                                src="https://www.sora.ltd/media/images/twitter.png" alt=""></i></a>
+                </div>
+            </div>
+            
+        <div id="otherpost">
+            
+            
+            <a data-pjax class="next-post-pc" href="https://www.sora.ltd/post/yi-ge-yue-de-gan-qing-shi/"  style="color: black;">
+                <div id="npcontainer">
+                    
+                    <img src="https://jioushan.top/wp-content/uploads/2021/04/087f4d4957238aeabf71870059958747.jpeg" style="width: 100%;" class="opimg">
+                    
+                    <h4 class="optitle">一个月的感情史</h4>
+                </div>
+            </a>
+            <div class="next-post">
+                下一篇 <a  data-pjax href="https://www.sora.ltd/post/yi-ge-yue-de-gan-qing-shi/">一个月的感情史</a>
+            </div>
+            
         </div>
     </div>
-
-    <div id="friendscontainer">
-        <div id="friendsrule">
-            <p>暂无提示</p><p>暂无提示</p>
-        </div>
-        
-        
-        
+    </div>
+    </div>
+    <!-- 弹窗 -->
+    <div id="myModal" class="modal">
+        <img class="modal-content" id="img01">
     </div>
 </body>
-                    <div id="comment" class="comment" >
+<script>
+    //文章阅读热度
+    var pl = $("#pl").html();
+    var rootaddr = $("#rootaddr").html();
+    pl = pl.replace(rootaddr, "");
+    $("#hotnum").attr('id', pl);
+</script>
+                    <div class="toc-container">
+                        
+                    </div>
+                    <div class="tog">
+                        <div class="toggleContainer">
+                            <div class="toggle">
+                                <i class="fas fa-angle-double-up"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!---------------------------- 评论系统👇 ------------------------->
+                    <div id="comment" class="comment">
                         <div class="commentcontainer">
                             
                                 
                             
                         </div>
                     </div>
+                    <!---------------------------- 评论系统👆 ------------------------->
                 </div>
-                <div class="col-md-1 col-lg-1"></div>
+                <!-- main标签，pjax渲染时加载以上内容👆 -->
+                <div class="col-md-1 col-lg-2"></div>
                 <div id="bg">
                 </div>
             </div>
             <!-- ----------------左侧菜单栏html 👆-------------------------------------->
-            <!------------------ 顶部菜单栏html👇--------->
             
-        <!------------------ 顶部菜单栏html👆--------->
-        
-        <head>
+        </div>
+        <!-- aplayer播放器加载👇 -->
+            
+            <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 </head>
 
@@ -1018,48 +1243,101 @@ menulist.eq(i).show();
         }
     }
 </script>
-        
+            
+        <!-- aplayer播放器加载👆 -->
+    </div>
+    
 
-    </div>
-    
-    <div class="tog">
-        <div class="toggleContainer">
-            <div class="toggle">
-                <i class="fas fa-angle-double-up"></i>
-            </div>
-        </div>
-    </div>
-    <div id="bgchoice" style="display: none">link</div>
-    
-    <div id="bgurl" style="display:none">https://api.jsmsr.com/image/v2</div>
-    
-    </div>
-    <div id="landlord">
-        <div class="message" style="opacity:0"></div>
-        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
-    </div>
-    <div id="domainname" style="display:none">https://www.sora.ltd</div>
+    <!-- 背景图加载方式👇 -->
+    <div id="bgchoice" style="display: none">link
+                </div>
+                
+                <div id="bgurl" style="display:none">https://api.jsmsr.com/image/v2</div>
+                
+    <!-- 背景图加载方式👆 -->
 </body>
-</html>
 
-<!-------------------- live2d功能👇 --------------------------->
+<script>
+    //初始化
+    //更换twikoo头像
+    setTimeout(replaceAvatar,1000);
+    setTimeout(replaceAvatar,2000);
+    setTimeout(replaceAvatar,8000);
+    // --------为每张图片添加懒加载（lazyload）标签-->懒加载功能 👇------------
+    imglazyloadinit()
+    lazyload();
+    //为文章内所有代码块添加代码复制功能 👇
+    codeinit();
+    // ------代码高亮显示功能-------------
+    hljs.initHighlightingOnLoad();
+    if (shareChoice)
+        shareInit();
+    if (donateChoice)
+        donateInit();
+</script>
 
-<!-------------------- live2d功能👆 --------------------------->
+<!------------------ 加载live2d模型功能（看板娘）👇 ---------------->
+
+<!------------------ 加载live2d模型功能（看板娘）👆 ---------------->
+
+
+<!----------------------- 返回顶部按钮功能👇 --------------------->
+<script>
+    $(function () {
+        $('.toggleContainer').click(function () {
+            $('html,body').animate({
+                scrollTop: '0px'
+            }, 800);
+        });
+        $(window).scroll(function () {
+            var st = $(window).scrollTop();
+            if (st > 30) {
+                $(".toggleContainer").fadeIn(400);
+            } else {
+                $(".toggleContainer").fadeOut(100);
+            }
+        });
+    });
+</script>
+<!----------------------- 返回顶部按钮功能👆 --------------------->
+
 
 <!------------ 加载全局背景图功能👇（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
 <script>
-        var bgchoice=$('#bgchoice').html();
-        var bg = $('#bg');
-        var bgurl = document.getElementById("bgurl").innerHTML;
-        if(bgchoice=='default')
-            for (var i = 0; i < 3; i++)
-                bgurl = bgurl.replace("\\", "/");
-        bg.css("background", "url('" + bgurl + "')");
-
-        window.onload = function(){
-            aplayerbtnInit();
-        }
+    var bgchoice = $('#bgchoice').html();
+    var bg = $('#bg');
+    var bgurl = document.getElementById("bgurl").innerHTML;
+    if (bgchoice == 'default')
+        for (var i = 0; i < 3; i++)
+            bgurl = bgurl.replace("\\", "/");
+    bg.css("background", "url('" + bgurl + "')");
 </script>
 <!------------ 加载全局背景图功能👆（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
 
-    <script src="https://www.sora.ltd/media/js/index.js"></script>
+
+
+
+<script src="https://www.sora.ltd/media/js/index.js"></script>
+
+
+<script>
+    //加载后的事件同步（阅读量、移动端评论等
+    window.onload = function () {
+    //代码块高亮渲染
+    document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+    });
+    alert("hljs load ok")
+        getHotnum();
+        var sharepc = $(".share").eq(0).html();
+        $(".share").eq(1).html(sharepc);   //插件只会寻找一个分享标签渲染，所以需要手动添加到移动端
+        aplayerbtnInit();
+        $(".hljs").css({
+            "padding": "20px"
+        })
+    }
+</script>
+
+<!-- <script src="https://www.sora.ltd/media/js/av-min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.13.0/dist/av-min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.6.1/dist/av-live-query-min.js"></script> -->
