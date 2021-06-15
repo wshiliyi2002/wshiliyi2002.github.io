@@ -141,7 +141,7 @@
                     
                     
                     <li>
-                        <a data-pjax href="/post/about" style="color:white">
+                        <a data-pjax href="https://www.sora.ltd/post/guan-yu" style="color:white">
                             <i style="font-size: 40px;"><img class="icon menuicon" src="" alt="关于"></i>
                             关于
                         </a>
@@ -159,7 +159,7 @@
                                 <i style="font-size: 40px;"><img class="icon menuicon" src="" alt="御风飞行"></i>御风飞行
                             </a></li>
                     
-                  <li><img src="https://www.sora.ltd/images/avatar.png?v=1623750818034" alt=""
+                  <li><img src="https://www.sora.ltd/images/avatar.png?v=1623751733446" alt=""
                     class="menutopavatar"></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -745,7 +745,7 @@ menulist.eq(i).show();
         
         
         <li>
-          <a data-pjax href="/post/about">
+          <a data-pjax href="https://www.sora.ltd/post/guan-yu">
             关于
           </a>
         </li>
@@ -801,11 +801,11 @@ menulist.eq(i).show();
                     <div class="mobilebar">
                         <img src="" alt="" class="plbg">
 <script>
-    var bgchoice = "default";
+    var bgchoice = "link";
     if(bgchoice=='default')
         var plbgurl = ""
     else  
-        var plbgurl = ""
+        var plbgurl = "https://api.jsmsr.com/image/v2"
     $(".plbg").attr("src",plbgurl);
     $(".plbg").fadeIn(200);
 </script>
@@ -984,10 +984,10 @@ menulist.eq(i).show();
         <div id="bg">
         </div>
         <!-- 背景图加载方式👇 -->
-        <div id="bgchoice" style="display: none">default
+        <div id="bgchoice" style="display: none">link
             </div>
             
-            <div id="bgurl" style="display:none">/media/images/bgimg.png</div>
+            <div id="bgurl" style="display:none">https://api.jsmsr.com/image/v2</div>
                
         <!-- 背景图加载方式👆 -->
     </div>
@@ -1000,6 +1000,16 @@ menulist.eq(i).show();
 </body>
 
 <!-------------------- live2d功能👇 --------------------------->
+
+    <script type="text/javascript">
+        var message_Path = '/live2d/'
+        var home_Path = document.getElementById("domainname").innerHTML+"/"; //此处修改为你的域名，必须带斜杠
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/live2d.js"></script>
+    <script type="text/javascript" src="https://www.sora.ltd/media/live2d/js/message.js"></script>
+    <script type="text/javascript">
+            loadlive2d("live2d", "https://www.sora.ltd/media/live2d/assets/tororo.model.json");
+    </script>
 
 <!-------------------- live2d功能👆 --------------------------->
 
