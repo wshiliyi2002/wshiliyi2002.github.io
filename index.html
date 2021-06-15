@@ -21,9 +21,7 @@
             <div class="row">
                 <!-- ----------------左侧菜单栏html 👇-------------------------------------->
                 
-                <!-- ----------------左侧菜单栏html 👆-------------------------------------->
-                <!------------------ 顶部菜单栏html👇--------->
-                 
+                <!--------------- pc端菜单栏👇 ---------------->
                 <div class="side"><head>
     <link rel="stylesheet" href="https://www.sora.ltd/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://www.sora.ltd/styles/main.css">
@@ -84,129 +82,194 @@
 
     <!--------------- 左侧菜单栏👇 ------------------------>
     
+    <div id=side>
+        <div class="r_m_div">
+            <a onclick="showAaplayer()"><i style="font-size: 20px;"><img
+                        src='https://www.sora.ltd/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
+        </div>
+        <div class="avatar-border">
+            <img src="https://www.sora.ltd/images/avatar.png?v=1623753621035" class="avatar">
+        </div>
+        <div class="sitename">Sora</div>
+        <span class="description" data-text='["一名双性恋的情感学习成长🌈"]'>&nbsp;</span>
+        <div class="siteinfocontainer">
+            <span class="siteinfo">文章</span>
+            <span class="siteinfo">标签</span>
+        </div>
+        <div class="siteinfocontainer">
+            <span class="siteinfo" id="siteinfo-postsnum"></span>
+            <span class="siteinfo">0</span>
+        </div>
+        
+        <div class="search">
+            <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
+            <input type="text" class="search-input" placeholder="关键字检索">
+            <div class="search-results"></div>
+        </div>
+        
+    <div class="share-button">
+        <span>PY交易</span>
+        
+        <a href="https://github.com/jioushan" target="_blank"><i style="font-size: 20px;"><img class="icon"
+                    src="https://www.sora.ltd/media/images/github.png" alt=""></i></a>
+        
+        
+        <a onclick="showqq()"><i style="font-size: 20px;"><img class="icon"
+                    src="https://www.sora.ltd/media/images/QQ.png" alt=""></i></a>
+        
+        
+        
+        
+        
+        
+        
+        <a href="https://steamcommunity.com/id/jioushan182/" target="_blank"><i style="font-size: 20px;"><img class="icon"
+                    src="https://www.sora.ltd/media/images/steam.png" alt=""></i></a>
+        
+    </div>
+    <div id="qq" style="display:none">1832328675</div>
+    <!------------ 加载菜单按钮👇 ------------------------->
+    <div class="menucontainer">
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="/" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="首页"></i>&nbsp;<span
+                    data-text="首页">首页</span>
+            </a>
+        </div>
+        
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="/archives" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="归档"></i>&nbsp;<span
+                    data-text="归档">归档</span>
+            </a>
+        </div>
+        
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="/tags" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="标签"></i>&nbsp;<span
+                    data-text="标签">标签</span>
+            </a>
+        </div>
+        
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="https://www.sora.ltd/post/guan-yu" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="关于"></i>&nbsp;<span
+                    data-text="关于">关于</span>
+            </a>
+        </div>
+        
+        
+
+        
+            
+        <div class="mchocie description">
+            <a data-pjax href="https://www.sora.ltd/friends" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="友人帐"></i>&nbsp;<span data-text="友人帐">友人帐</span>
+            </a>
+        </div>
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="#terrestrial" id="fog_go" class="open-popup menubutton" style="margin-right: 15px;">
+                    <i><img class="icon menuicon" src="" alt="御风飞行"></i>&nbsp;<span data-text="御风飞行">御风飞行</span>
+            </a>
+        </div>
+        
+    </div>
+    <!------------ 加载菜单按钮👆 ------------------------->
+    <hr>
+    <style>
+    .copyright {
+        font-size: 15px;
+        color: #d9d9d9;
+    }
+
+
+    @media screen and (min-width: 1200px) {
+        .foot {
+            width: 100%;
+            height: 130px;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .foot {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+    <div class="foot">
+        <div id="footinfo">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | Theme: <a
+                href="https://github.com/850552586/gridea-theme-fog">Fog</a>
+            <div>
+                
+                <div id="sitegotimeDate">载入天数...</div>
+                <div id="sitegotimes">载入时分秒...</div>
+                <div id="cussitetime" style="display:none">02/22/2020</div>
+                
+            </div>
+            <div>
+                
+            </div>
+            <div class="copyright" style="color:white;text-align: center;">Copyright Jsmsr © 2021
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+
+<script>
+    //----------------------站点运行时间
+    var now = new Date();
+
+    function createtime() {
+        var sitegotime = document.getElementById("cussitetime").innerHTML + " 00:00:00";
+        var grt = new Date(sitegotime); //此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime() + 250);
+        days = (now - grt) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if (String(hnum).length == 1) {
+            hnum = "0" + hnum;
+        }
+        minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if (String(mnum).length == 1) {
+            mnum = "0" + mnum;
+        }
+        seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if (String(snum).length == 1) {
+            snum = "0" + snum;
+        }
+        document.getElementById("sitegotimeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
+        document.getElementById("sitegotimes").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+
+    let intervalId = setInterval("createtime()", 250);
+</script>
+
+    </div>
+
+
+    <script src="https://www.sora.ltd/media/js/wordshow.js"></script>
+    
     <!--------------- 左侧菜单栏👆 ------------------------>
 
     <!----------------- 顶部菜单栏👇 ------------------------>
-    
-    <div>
-        <nav class="navbar navbar-inverse navbar-fixed-top navbartop">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <a data-pjax class="navbar-brand" href="https://www.sora.ltd"
-                        style="font-size:21px">Sora&nbsp;&nbsp;|&nbsp;&nbsp;</a>
-                    <a class="navbar-brand" href=""
-                        style="font-size:15px;font-family:kaiti">一名双性恋的情感学习成长🌈</a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse">
-                    
-                    <div class="search nav navbar-nav" style="margin-top:8px">
-                        <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
-                        <input type="text" class="search-input"
-                            placeholder="关键字检索">
-                        <div class="search-results"></div>
-                    </div>
-                    
-                <div class="search nav navbar-nav searchtop">
-                <a title="text" onclick="document.getElementById('socialMenu').style.display='block'"><i><img class="social"
-                    src="https://www.sora.ltd/media/images/social.png" alt=""></i></a>
-                    <a onclick="showAaplayer()"><i style="font-size: 20px;"><img
-                                src='https://www.sora.ltd/media/images/music.png' alt="音乐播放器"
-                                class="musicbtn musictop"></i></a>
-                </div>
-                <ul class="nav navbar-nav" style="float: right;margin-right:5%">
-                    
-                    
-                    <li>
-                        <a data-pjax href="/" style="color:white">
-                            <i style="font-size: 40px;"><img class="icon menuicon" src="" alt="首页"></i>
-                            首页
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    <li>
-                        <a data-pjax href="/archives" style="color:white">
-                            <i style="font-size: 40px;"><img class="icon menuicon" src="" alt="归档"></i>
-                            归档
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    <li>
-                        <a data-pjax href="/tags" style="color:white">
-                            <i style="font-size: 40px;"><img class="icon menuicon" src="" alt="标签"></i>
-                            标签
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    <li>
-                        <a data-pjax href="https://www.sora.ltd/post/guan-yu" style="color:white">
-                            <i style="font-size: 40px;"><img class="icon menuicon" src="" alt="关于"></i>
-                            关于
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                    <li><a data-pjax href="https://www.sora.ltd/friends" style="color:white">
-                            <i style="font-size: 40px;"><img class="icon menuicon" src="" alt="友人帐"></i>友人帐
-                        </a></li>
-                    
-                    
-                        <li><a data-pjax href="#terrestrial" id="fog_go" class="open-popup" style="color:white">
-                                <i style="font-size: 40px;"><img class="icon menuicon" src="" alt="御风飞行"></i>御风飞行
-                            </a></li>
-                    
-                  <li><img src="https://www.sora.ltd/images/avatar.png?v=1623751967748" alt=""
-                    class="menutopavatar"></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-    </nav>
-    <div id="socialMenu">
-        <div class="animate">
-            <div class="socialContainer">
-                
-                <a href="https://github.com/jioushan" target="_blank"><i style="font-size: 40px;"><img
-                            class="icon " src="https://www.sora.ltd/media/images/github.png" alt=""></i></a>
-                
-                
-                <a onclick="showqq()" style="cursor:pointer"><i style="font-size: 40px;"><img class="icon"
-                            src="https://www.sora.ltd/media/images/QQ.png" alt=""></i></a>
-                
-                
-                
-                
-                
-                
-                
-                <a href="https://steamcommunity.com/id/jioushan182/" target="_blank"><i style="font-size: 40px;"><img
-                            class="icon" src="https://www.sora.ltd/media/images/steam.png" alt=""></i></a>
-                
-            </div>
-            <div id="qq" style="display:none">1832328675</div>
-        </div>
-    </div>
-
-    <script>
-        var social = document.getElementById('socialMenu');
-        var fancybox = document.getElementsByClassName('fancybox-stage');
-        // 鼠标点击模型外区域关闭登录框
-        window.onclick = function (event) {
-            if (event.target == social) {
-                social.style.display = "none";
-            }
-        }
-    </script>
-    </div>
     
     <!----------------- 顶部菜单栏👆 ------------------------>
 
@@ -269,9 +332,10 @@
     </div>
     
         <script>
-            let menupos = 'top'
+            let menupos = 'left';
+            $("#siteinfo-postsnum").html(postsnum);
         </script>
-        
+    
     <!------ 根据自定义配置声明变量👆 --------------------->
 
 
@@ -662,6 +726,17 @@ menulist.eq(i).show();
 }
 </script>
 <!--------------------- 菜单栏图标加载功能👆 -----------------------></div>
+                <!--------------- pc端菜单栏👆 ---------------->
+                <div id="tab1" class="tab">
+                    <div class="bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="close"></div>
+                </div>
+                <div class="col-md-1 col-lg-3"></div>
+                <!----------- 移动端导航栏👇 ----------------->
                 <div class="mobilebar"><head>
   <!-- 引入Bootstrap核心样式文件 -->
   <link rel="stylesheet" href="https://www.sora.ltd/media/css/bootstrap.min.css">
@@ -794,14 +869,15 @@ menulist.eq(i).show();
       }
     }
   </script> 
+                <!----------- 移动端导航栏👆 ----------------->
                 </div>
-                <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-6 topindex">
+                <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
                     <!-- 移动端 -->
                     <div class="mobilebar">
                         <!-- 移动端欢迎页 -->
 <div class="welcome">
     <div class="avatar-border">
-        <img src="https://www.sora.ltd/images/avatar.png?v=1623751967748" class="avatar">
+        <img src="https://www.sora.ltd/images/avatar.png?v=1623753621035" class="avatar">
     </div>
     <span class="mobiledescribtion"></span>
 </div>
@@ -886,11 +962,121 @@ menulist.eq(i).show();
     $(".plbg").fadeIn(200);
 </script>
                     </div>
+                    <div style="display:none">
+</div>
                     <link rel="stylesheet" href="https://www.sora.ltd/media/css/font-awesome.css">
 
-<div id="post-container">
+    <div style="display: none;">
+        
+    </div>
+
     
-</div>
+    <div id="post-container" class="eleg-allpostscontainer">
+        <div v-for="post in postinfo" class="eleg-posts">
+            <div v-if="post.elegcontainer=='eleg-postcontainer-left'">
+                    <div :class="post.elegcontainer">
+                        <img :src="post.feature" alt="" :class="post.imgclass">
+                        
+                        <img class="eleg-swordsmen-left" src="https://www.sora.ltd/media/images/swordsmenleft.webp" alt="">
+                        
+                        <div class="eleg-info">
+                            <span class="eleg-title">{{post.title}}</span>
+                            <div style="margin-top:15px;">
+                                <span class="postdate eleg-date"><i class="fa fa-calendar"></i>{{post.date}}</span>
+                                <span class="poststatus postdate eleg-stats"><i class="fa fa-clock-o"></i> {{post.stats}}</span>
+                            </div>
+                            <div style="margin-top:50px">
+                                <a :href="post.link" class="eleg-btn" data-pjax>阅读全文</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='eleg-tags'>
+                        <div v-for="tag in post.tags">
+                            <div class="posttag">
+                                <a data-pjax href="" class="postlink eleg-postlink">
+                                    <i class="fa fa-tag"></i>{{tag}}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div v-else>
+                    <div :class="post.elegcontainer">
+                        <div class="eleg-info">
+                            <span class="eleg-title">{{post.title}}</span>
+                            <div style="margin-top:15px;">
+                                <span class="postdate eleg-date"><i class="fa fa-calendar"></i>{{post.date}}</span>
+                                <span class="poststatus postdate eleg-stats"><i class="fa fa-clock-o"></i> {{post.stats}}</span>
+                            </div>
+                            <div style="margin-top:50px">
+                                <a :href="post.link" class="eleg-btn" data-pjax>阅读全文</a>
+                            </div>
+                        </div>
+                        
+                        <img class="eleg-swordsmen" src="https://www.sora.ltd/media/images/swordsmen.webp" alt="">
+                        
+                        <img :src="post.feature" alt="" :class="post.imgclass">
+                    </div>
+                    <div class='eleg-tags'>
+                        <div v-for="tag in post.tags">
+                            <div class="posttag">
+                                <a data-pjax href="" class="postlink eleg-postlink">
+                                    <i class="fa fa-tag"></i>{{tag}}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+    var app2 = new Vue({
+      el: '#post-container',
+      mounted:function(){
+        this.getpostInfo();
+      },
+      methods:{
+         getpostInfo:function(){
+             var plflist = $("span[name='plfeature']");
+             var pltlist = $("span[name='pltitle']");
+             var plllist = $("span[name='pllink']");
+             var pldlist = $("span[name='pldate']");
+             var plslist = $("span[name='plstats']");
+             var pltaglist = $("span[name='pltag']");
+             for(var i=0;i<this.pagesize&&i<plflist.length;i++){
+                 var d = {};
+                 var tags = []
+                 d["feature"] = plflist.eq(i).html();
+                 d["title"] = pltlist.eq(i).html();
+                 d["link"] = plllist.eq(i).html();
+                 d["date"] = pldlist.eq(i).html();
+                 d['stats'] = plslist.eq(i).html();
+                 for(var j=0;j<pltaglist.length;j++){
+                     if(pltaglist.eq(j).attr('alt')==d['title'])
+                        tags.push(pltaglist.eq(j).html())
+                 }
+                 d["tags"] = tags;
+                 if(i%2==0)
+                 {
+                     d['elegcontainer'] = 'eleg-postcontainer-left';
+                     d['imgclass'] = 'eleg-img-left'
+                 }
+                 else{
+                    d['elegcontainer'] = 'eleg-postcontainer-right';
+                    d['imgclass'] = 'eleg-img-right' 
+                 }
+                 this.postinfo.push(d);
+             }
+         }
+      },
+      data: {
+        pagesize: "10",
+        postinfo:[],
+      }
+    })
+    </script>
 
                     <div>
                         <div class="pcpagi">
@@ -944,97 +1130,12 @@ menulist.eq(i).show();
     }
 </script>
                     </div>
-                    
-                    <style>
-    .copyright {
-        font-size: 15px;
-        color: #d9d9d9;
-    }
-
-
-    @media screen and (min-width: 1200px) {
-        .foot {
-            width: 100%;
-            height: 130px;
-        }
-    }
-
-    @media screen and (max-width: 1200px) {
-        .foot {
-            display: none;
-        }
-    }
-</style>
-
-<body>
-    <div class="foot">
-        <div id="footinfo">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | Theme: <a
-                href="https://github.com/850552586/gridea-theme-fog">Fog</a>
-            <div>
-                
-                <div id="sitegotimeDate">载入天数...</div>
-                <div id="sitegotimes">载入时分秒...</div>
-                <div id="cussitetime" style="display:none">02/22/2020</div>
-                
-            </div>
-            <div>
-                
-                <script async
-                    src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/busuanzi.pure.mini.js"></script>
-                <div id="vistornum" style="margin:0">
-                    <span id="busuanzi_container_site_uv">
-                        <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i> 总访问量:<span
-                            id="busuanzi_value_site_pv"></span>&nbsp;&nbsp;|&nbsp;&nbsp;
-                        <i class="fa fa-user-o" aria-hidden="true"></i> 访问人数:<span id="busuanzi_value_site_uv"></span>
-                    </span>
                 </div>
+                <div class="col-md-1 col-lg-2"></div>
                 
-            </div>
-            <div class="copyright" style="color:white;text-align: center;">Copyright © 2020  备案号: 鄂ICP备...号
-            </div>
-        </div>
-
-
-
-    </div>
-</body>
-
-<script>
-    //----------------------站点运行时间
-    var now = new Date();
-
-    function createtime() {
-        var sitegotime = document.getElementById("cussitetime").innerHTML + " 00:00:00";
-        var grt = new Date(sitegotime); //此处修改你的建站时间或者网站上线时间 
-        now.setTime(now.getTime() + 250);
-        days = (now - grt) / 1000 / 60 / 60 / 24;
-        dnum = Math.floor(days);
-        hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
-        hnum = Math.floor(hours);
-        if (String(hnum).length == 1) {
-            hnum = "0" + hnum;
-        }
-        minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
-        mnum = Math.floor(minutes);
-        if (String(mnum).length == 1) {
-            mnum = "0" + mnum;
-        }
-        seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-        snum = Math.round(seconds);
-        if (String(snum).length == 1) {
-            snum = "0" + snum;
-        }
-        document.getElementById("sitegotimeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
-        document.getElementById("sitegotimes").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
-    }
-
-    let intervalId = setInterval("createtime()", 250);
-</script>
-
-                    
-                </div>
-                <div class="col-xs-6 col-sm-3"></div>
-                
+                <!-- ----------------左侧菜单栏html 👆-------------------------------------->
+                <!------------------ 顶部菜单栏html👇--------->
+                 
                 <!------------------ 顶部菜单栏html👆--------->
                 </div>
             </div>
@@ -1151,6 +1252,7 @@ menulist.eq(i).show();
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
 
+        <script src="https://www.sora.ltd/media/js/index.js"></script>
         
 </body>
 </html>
