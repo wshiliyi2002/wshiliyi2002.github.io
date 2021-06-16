@@ -83,7 +83,7 @@
                         src='https://www.sora.ltd/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://www.sora.ltd/images/avatar.png?v=1623839148533" class="avatar">
+            <img src="https://www.sora.ltd/images/avatar.png?v=1623839299879" class="avatar">
         </div>
         <div class="sitename">Sora</div>
         <span class="description" data-text='["一名双性恋的情感学习成长🌈"]'>&nbsp;</span>
@@ -109,9 +109,6 @@
                     src="https://www.sora.ltd/media/images/github.png" alt=""></i></a>
         
         
-        <a onclick="showqq()"><i style="font-size: 20px;"><img class="icon"
-                    src="https://www.sora.ltd/media/images/QQ.png" alt=""></i></a>
-        
         
         
         
@@ -122,7 +119,7 @@
                     src="https://www.sora.ltd/media/images/steam.png" alt=""></i></a>
         
     </div>
-    <div id="qq" style="display:none">1832328675</div>
+    <div id="qq" style="display:none"></div>
     <!------------ 加载菜单按钮👇 ------------------------->
     <div class="menucontainer">
         
@@ -172,12 +169,6 @@
         </div>
         
         
-        <div class="mchocie description">
-            <a data-pjax href="#terrestrial" id="fog_go" class="open-popup menubutton" style="margin-right: 15px;">
-                    <i><img class="icon menuicon" src="" alt="御风飞行"></i>&nbsp;<span data-text="御风飞行">御风飞行</span>
-            </a>
-        </div>
-        
     </div>
     <!------------ 加载菜单按钮👆 ------------------------->
     <hr>
@@ -214,6 +205,16 @@
                 
             </div>
             <div>
+                
+                <script async
+                    src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/busuanzi.pure.mini.js"></script>
+                <div id="vistornum" style="margin:0">
+                    <span id="busuanzi_container_site_uv">
+                        <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i> 总访问量:<span
+                            id="busuanzi_value_site_pv"></span>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <i class="fa fa-user-o" aria-hidden="true"></i> 访问人数:<span id="busuanzi_value_site_uv"></span>
+                    </span>
+                </div>
                 
             </div>
             <div class="copyright" style="color:white;text-align: center;">Copyright Jsmsr © 2021
@@ -1053,7 +1054,7 @@ menulist.eq(i).show();
         var aplayerid = "https://music.163.com/#/my/m/music/playlist?id=6805328145";
         var aplayerserver = "netease";
         var aplayerorder = "random";
-        var aplayerautoplay = "false";
+        var aplayerautoplay = "true";
         var aplayer = $("#myaplayer");
         aplayer.attr("server", aplayerserver);
         aplayer.attr("id", aplayerid);
