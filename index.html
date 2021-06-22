@@ -88,7 +88,7 @@
                         src='https://www.sora.ltd/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://www.sora.ltd/images/avatar.png?v=1624331214775" class="avatar">
+            <img src="https://www.sora.ltd/images/avatar.png?v=1624332646616" class="avatar">
         </div>
         <div class="sitename">Sora</div>
         <span class="description" data-text='["一名双性恋的情感学习成长🌈"]'>&nbsp;</span>
@@ -114,6 +114,9 @@
                     src="https://www.sora.ltd/media/images/github.png" alt=""></i></a>
         
         
+        <a onclick="showqq()"><i style="font-size: 20px;"><img class="icon"
+                    src="https://www.sora.ltd/media/images/QQ.png" alt=""></i></a>
+        
         
         
         
@@ -124,7 +127,7 @@
                     src="https://www.sora.ltd/media/images/steam.png" alt=""></i></a>
         
     </div>
-    <div id="qq" style="display:none"></div>
+    <div id="qq" style="display:none">http://wpa.qq.com/msgrd?v=3&amp;uin=1832328675&amp;site=qq&amp;menu=yes</div>
     <!------------ 加载菜单按钮👇 ------------------------->
     <div class="menucontainer">
         
@@ -620,7 +623,7 @@
             imglazyloadinit();
             lazyload();
             codeinit();
-            if ("default" == "twikoo") {
+            if ("valine" == "twikoo") {
                 //twikoo头像更换
                 setTimeout(replaceAvatar, 3000);
                 setTimeout(replaceAvatar, 8000); //部分博主站点速度加载过慢，再添加一个延迟
@@ -944,7 +947,7 @@ menulist.eq(i).show();
                         <!-- 移动端欢迎页 -->
 <div class="welcome">
     <div class="avatar-border">
-        <img src="https://www.sora.ltd/images/avatar.png?v=1624331214775" class="avatar">
+        <img src="https://www.sora.ltd/images/avatar.png?v=1624332646616" class="avatar">
     </div>
     <span class="mobiledescribtion"></span>
 </div>
@@ -1030,6 +1033,35 @@ menulist.eq(i).show();
 </script>
                     </div>
                     <div style="display:none">
+        <div id="vcomments">
+        </div>
+        <script>
+            var valine = new Valine();
+            var curpath = window.location.pathname;
+            if (curpath[curpath.length - 1] != '/')
+                curpath += '/'
+            valine.init({
+                el: '#vcomments',
+                appId: 'aOJfIsTUuB8H0OU5XGgm24OH-MdYXbMMI',
+                appKey: 'xhF3iGFHEgeXqAqKjOYGGDAj',
+                notify: true,
+                verify: false,
+                avatar: 'retro',
+                pageSize: 10,
+                placeholder: '既然来了，何不畅所欲言呢？',
+                recordIP: true,
+                path: curpath //[重点] 记得添加path路径
+            });
+        </script>
+        <script type="text/javascript">
+            var jrsc = '既然来了，何不畅所欲言呢？';
+            jinrishici.load(function (result) {
+                // 自己的处理逻辑
+                jrsc = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin
+                    .dynasty + " · " + result.data.origin.author;
+            });
+        </script>
+
 </div>
                     <link rel="stylesheet" href="https://www.sora.ltd/media/css/font-awesome.css">
 
